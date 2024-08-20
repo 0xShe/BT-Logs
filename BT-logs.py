@@ -32,7 +32,7 @@ def process_log_files():
         if all_data:
             df = pd.DataFrame(all_data)
             # 转换列名为中文
-            df.columns = ['IP 地址', '日期时间', '请求方法', '请求地址', '状态码', '数据大小', '用户代理']
+            df.columns = ['IP 地址', '日期时间', '请求方法', '请求地址', '状态码', '数据大小', '用户UA']
             excel_file_name = f"{os.path.splitext(log_file)[0]}.xlsx"
             df.to_excel(excel_file_name, index=False)
             
